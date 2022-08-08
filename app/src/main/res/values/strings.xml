@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Agenda</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_seu_e_mail">Digite seu e-mail</string>
+    <string name="digite_seu_telefone">Digite seu telefone</string>
+    <string name="botao_menu_salvar">Salvar</string>
 </resources>
