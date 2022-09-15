@@ -4,4 +4,8 @@
     <string name="digite_seu_e_mail">Digite seu e-mail</string>
     <string name="digite_seu_telefone">Digite seu telefone</string>
     <string name="botao_menu_salvar">Salvar</string>
+    <string name="botao_fab_inserir">Inserir</string>
+    <string name="desfazer_alteração">Desfazer</string>
+    <string name="telefone_celular">Digite seu telefone celular</string>
+    <string name="apagar">Apagar</string>
 </resources>

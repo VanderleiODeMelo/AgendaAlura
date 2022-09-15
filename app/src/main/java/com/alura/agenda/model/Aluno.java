@@ -1,42 +1,38 @@
 package com.alura.agenda.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
-public class Aluno implements Parcelable {
+import java.io.Serializable;
+import java.util.Calendar;
 
+@Entity
+public class Aluno implements Serializable {
+
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String nome;
     private String email;
-    private String telefone;
+    private Calendar momentoCadastro = Calendar.getInstance();
 
     public Aluno() {
     }
 
-    public Aluno(String nome, String email, String telefone) {
+    @Ignore
+    public Aluno(String nome, String email) {
         this.nome = nome;
         this.email = email;
-        this.telefone = telefone;
+
     }
 
-    protected Aluno(Parcel in) {
-        id = in.readInt();
-        nome = in.readString();
-        email = in.readString();
-        telefone = in.readString();
+    public Calendar getMomentoCadastro() {
+        return momentoCadastro;
     }
 
-    public static final Creator<Aluno> CREATOR = new Creator<Aluno>() {
-        @Override
-        public Aluno createFromParcel(Parcel in) {
-            return new Aluno(in);
-        }
-
-        @Override
-        public Aluno[] newArray(int size) {
-            return new Aluno[size];
-        }
-    };
+    public void setMomentoCadastro(Calendar momentoCadastro) {
+        this.momentoCadastro = momentoCadastro;
+    }
 
     public int getId() {
         return id;
@@ -62,24 +58,9 @@ public class Aluno implements Parcelable {
         this.email = email;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public boolean temIdValido() {
+        return id > 0;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeInt(id);
-        parcel.writeString(nome);
-        parcel.writeString(email);
-        parcel.writeString(telefone);
-    }
 }

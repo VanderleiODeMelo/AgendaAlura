@@ -5,16 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -27,7 +29,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:id="@+id/item_aluno_campo_nome"
@@ -36,6 +39,9 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
+                    android:maxLines="1"
+                    android:maxLength="27"
+                    android:layout_marginBottom="8dp"
                     android:textSize="26sp"
                     android:textStyle="bold"
                     tools:text="Vanderlei" />
@@ -55,12 +61,11 @@
                     android:layout_marginEnd="8dp"
                     android:textSize="26sp"
                     android:textStyle="bold"
-                    tools:text="(11)5021-3645" />
+                    tools:text="(11)5033-3645" />
 
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </RelativeLayout>

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.activity.FormularioCadastroAlunosActivity">
+    android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/formulario_cadastro_alunos_campo_nome"
@@ -33,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@id/formulario_cadastro_alunos_campo_nome" />
 
     <EditText
-        android:id="@+id/formulario_cadastro_alunos_campo_telefone"
+        android:id="@+id/formulario_cadastro_alunos_campo_telefone_fixo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -44,5 +42,15 @@
         app:layout_constraintEnd_toEndOf="@id/formulario_cadastro_alunos_campo_email"
         app:layout_constraintStart_toStartOf="@id/formulario_cadastro_alunos_campo_email"
         app:layout_constraintTop_toBottomOf="@id/formulario_cadastro_alunos_campo_email" />
+
+    <EditText
+        android:id="@+id/formulario_cadastro_alunos_campo_telefone_celular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/telefone_celular"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@id/formulario_cadastro_alunos_campo_telefone_fixo"
+        app:layout_constraintStart_toStartOf="@id/formulario_cadastro_alunos_campo_telefone_fixo"
+        app:layout_constraintTop_toBottomOf="@id/formulario_cadastro_alunos_campo_telefone_fixo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

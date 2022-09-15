@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Trabalho/Documents/ProjetoAndroid/AgendaAlura/app/src/main/res/drawable/ic_lixeira_remover.xml" value="0.162" />
         <entry key="..\:/Users/Trabalho/Documents/ProjetoAndroid/AgendaAlura/app/src/main/res/layout/activity_formulario_cadastro_alunos.xml" value="0.2" />
         <entry key="..\:/Users/Trabalho/Documents/ProjetoAndroid/AgendaAlura/app/src/main/res/layout/activity_lista_alunos.xml" value="0.2" />
         <entry key="..\:/Users/Trabalho/Documents/ProjetoAndroid/AgendaAlura/app/src/main/res/layout/item_aluno.xml" value="0.2" />
+        <entry key="..\:/Users/Trabalho/Documents/ProjetoAndroid/AgendaAlura/app/src/main/res/layout/snackbar_personalizado.xml" value="0.192481884057971" />
         <entry key="..\:/Users/Trabalho/Documents/ProjetoAndroid/AgendaAlura/app/src/main/res/menu/formulario_cadastro_alunos_menus_opcoes.xml" value="0.2" />
       </map>
     </option>
