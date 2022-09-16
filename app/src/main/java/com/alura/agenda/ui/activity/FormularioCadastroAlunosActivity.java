@@ -31,7 +31,8 @@ import java.util.concurrent.Future;
 
 public class FormularioCadastroAlunosActivity extends AppCompatActivity {
 
-    public static final String TITULO_APPBAR = "Formulario cadastro aluno";
+    public static final String TITULO_APPBAR_SALVAR = "Formulário cadastro aluno";
+    public static final String TITULO_APPBAR_EDITAR = "Formulário edita aluno";
 
     private EditText idCampoNome;
     private EditText idCampoEmail;
@@ -48,7 +49,7 @@ public class FormularioCadastroAlunosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_cadastro_alunos);
-        setTitle(TITULO_APPBAR);
+
         alunoDao = AgendaDataBase.getInstance(FormularioCadastroAlunosActivity.this).alunoDao();
         telefoneDao = AgendaDataBase.getInstance(this).telefoneDao();
 
@@ -63,12 +64,14 @@ public class FormularioCadastroAlunosActivity extends AppCompatActivity {
 
             aluno = (Aluno) dadosAluno.getSerializableExtra(CHAVE_ALUNO);
             if (aluno != null) {
+                setTitle(TITULO_APPBAR_EDITAR);
 
                 idCampoNome.setText(aluno.getNome());
                 idCampoEmail.setText(aluno.getEmail());
                 preencherCamposTelefones(aluno);
             }
         } else {
+            setTitle(TITULO_APPBAR_SALVAR);
 
             aluno = new Aluno();
         }
